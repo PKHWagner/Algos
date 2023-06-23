@@ -34,6 +34,18 @@ class SLL {
 
     return this.head.data;
   }
+
+  display() {
+    let current = this.head;
+    let result = "";
+
+    while (current !== null) {
+      result += current.data + " ";
+      current = current.next;
+    }
+
+    return result.trim();
+  }
 }
 
 const SLL1 = new SLL();
@@ -45,14 +57,29 @@ const SLL1 = new SLL();
 // console.log(SLL1.removeHead());
 // console.log(SLL1.removeHead());
 
+// SLL1.addFront(18);
+// SLL1.addFront(5);
+// SLL1.addFront(73);
+
+// console.log(SLL1.getHeadValue());
+// SLL1.removeHead();
+// console.log(SLL1.getHeadValue());
+// SLL1.removeHead();
+// console.log(SLL1.getHeadValue());
+// SLL1.removeHead();
+// console.log(SLL1.getHeadValue());
+
 SLL1.addFront(18);
 SLL1.addFront(5);
 SLL1.addFront(73);
 
-console.log(SLL1.getHeadValue());
+console.log(SLL1.display());
+
 SLL1.removeHead();
-console.log(SLL1.getHeadValue());
+console.log(SLL1.display());
+
 SLL1.removeHead();
-console.log(SLL1.getHeadValue());
+console.log(SLL1.display()); 
+
 SLL1.removeHead();
-console.log(SLL1.getHeadValue());
+console.log(SLL1.display()); 
